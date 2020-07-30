@@ -5,11 +5,13 @@
 :root {
     --link: #007aff;
     --dark-gray: #898A8E;
-    /* --light-gray: #b1b2b7;
-    --ultra-light-gray: rgba(177, 178, 183, 0.4); */
+    --light-gray: #d6d6d6;
+    --ultra-light-gray: rgba(177, 178, 183, 0.4);
+    --spacing-small: 14px;
     --spacing-medium: 20px;
+    --spacing-large: 32px;
     --border-radius-normal: 25px;
-    --font: 'Roboto';
+    --font: 'Helvetica-Neue', 'Roboto', sans-serif;
 }
 
 
@@ -21,10 +23,42 @@ body {
 
 
 hr {
+  padding: 0;
+  margin: 0;
   border: none;
   height: 1px;
-  background-color: lightGray;
+  background-color: var(--light-gray);
 }
+
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  letter-spacing: 0.7px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+
+.one-liner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 1;
+}
+
+
+.body-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
 
 
 
@@ -55,16 +89,7 @@ hr {
 }
 
 
-.main-title {
-  margin: 0;
-  padding: 0;
-  font-size: 21px;
-  letter-spacing: 0.7px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.main-sub-title {
+.sub-title {
   margin: 4px 0 0 0;
   padding: 0;
   font-size: 15px;
@@ -85,4 +110,58 @@ hr {
   text-align: center;
   font-weight: 700;
   font-size: 15px;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #INDEX-PROJECTS
+\*------------------------------------*/
+
+.projects {
+  padding: var(--spacing-small) 0 var(--spacing-large) 0;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--spacing-small) 0px;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  border-radius: 20px;
+  width: 220px;
+  height: 478px;
+}
+
+
+.other-skills-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.other-skills-text {
+  margin: 0 0 0 var(--spacing-small);
+  padding: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #INDEX-ABOUT-ME
+\*------------------------------------*/
+
+.about-me {
+  margin: 0;
+  padding: var(--spacing-medium) 0 var(--spacing-large) 0;
 }
