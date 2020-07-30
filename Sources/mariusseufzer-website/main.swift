@@ -22,4 +22,4 @@ struct MariusSeufzerWebsite: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try MariusSeufzerWebsite().publish(withTheme: .foundation)
+try MariusSeufzerWebsite().publish(withTheme: .appStore)
