@@ -83,6 +83,19 @@ extension Theme where Site == MariusSeufzerWebsite {
                             )
                         ),
                         .hr()
+                    ),
+                    .footer(
+                        .class("footer"),
+                        .h3(.class("title"), .text("Footer")),
+                        .ul(
+                            .class("footer-list"),
+                            .forEach(context.site.footerItems, {
+                                .li(
+                                    .footerItem($0),
+                                    .if(context.site.footerItems.last != $0, .hr())
+                                )
+                            })
+                        )
                     )
                 )
             )

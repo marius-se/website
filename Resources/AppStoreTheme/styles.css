@@ -54,9 +54,14 @@ hr {
   margin: 0;
   padding: 0;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   font-size: 14px;
   line-height: 19px;
+}
+
+.body-link, .body-link:visited {
+  color: var(--link);
+  text-decoration: none;
 }
 
 
@@ -164,4 +169,49 @@ hr {
 .about-me {
   margin: 0;
   padding: var(--spacing-medium) 0 var(--spacing-large) 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #INDEX-FOOTER
+\*------------------------------------*/
+
+.footer {
+  padding: var(--spacing-small) 0 0 0;
+}
+
+.footer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer-item {
+  padding: var(--spacing-small) 0;
+}
+
+.footer-item-text {
+  margin-right: auto;
+}
+
+  .footer-item-text__plain {
+    color: var(--dark-gray);
+  }
+
+  .footer-item-text__link {
+    color: var(--link);
+  }
+
+  .footer-item-text__description {
+    color: black;
+  }
+
+.footer-item-icon {
+  width: 17px;
+  height: 17px;
+  margin: 0 0 0 auto;
 }
