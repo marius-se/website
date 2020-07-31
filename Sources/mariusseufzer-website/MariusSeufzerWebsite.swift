@@ -40,12 +40,13 @@ struct MariusSeufzerWebsite: Website {
         FooterItem.link(
             title: "Privacy Policy",
             destination: URL(string: "#")!,
+            openInNewTab: false,
             iconPath: Path("AppStoreTheme/assets/iconPrivacy.png"),
             iconAltText: "Privacy icon"
         ),
         FooterItem.text(
             title: "Copyright",
-            description: "&copy; 2019 Marius Seufzer"
+            description: "&copy; 2020 Marius Seufzer"
         )
     ]
 }

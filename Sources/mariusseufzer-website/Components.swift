@@ -3,17 +3,17 @@ import Publish
 import Plot
 
 enum FooterItem: Hashable {
-    case link(title: String, destination: URL, iconPath: Path, iconAltText: String)
+    case link(title: String, destination: URL, openInNewTab: Bool = true, iconPath: Path, iconAltText: String)
     case text(title: String, description: String)
 }
 
 extension Node where Context == HTML.BodyContext {
     static func footerItem(_ item: FooterItem) -> Self {
         switch item {
-        case let .link(title, destination, iconPath, iconAltText):
+        case let .link(title, destination, newTab, iconPath, iconAltText):
             return .a(
                 .class("body-link"),
-                .target(.blank),
+                .if(newTab, .target(.blank)),
                 .href(destination),
                 .span(
                     .class("footer-item  one-liner"),
