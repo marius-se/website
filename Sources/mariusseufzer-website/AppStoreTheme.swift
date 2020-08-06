@@ -72,9 +72,20 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 """),
                                 .br(),
                                 .br(),
-                                .text("""
-                                    If you have any questions about my service, or just wanna say hello, feel free to contact me. You can e-mail me at marius.seufzer@icloud.com or directly message me on Instagram @mariusseufzer.
-                                """),
+                                .text("If you have any questions about my service, or just wanna say hello, feel free to contact me. You can e-mail me at "
+                                ),
+                                .a(
+                                    .class("body-link"),
+                                    .href("mailto:Marius%20Seufzer%20%3Cmarius.seufzer@icloud.com%3E"),
+                                    .text("marius.seufzer@icloud.com")
+                                ),
+                                .text(" or directly message me on Instagram "),
+                                .a(
+                                    .class("body-link"),
+                                    .href(URL(string: "https://instagram.com/mariusseufzer")!),
+                                    .text("@mariusseufzer")
+                                ),
+                                .text("."),
                                 .br(),
                                 .br(),
                                 .text("""
