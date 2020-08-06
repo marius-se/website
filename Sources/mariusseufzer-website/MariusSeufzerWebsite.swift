@@ -12,9 +12,9 @@ struct MariusSeufzerWebsite: Website {
         let previewImageAltText: String
     }
 
-    let url = URL(string: "https://your-website-url.com")!
-    let name = "mariusseufzer-website"
-    let description = "A description of mariusseufzer-website"
+    let url = URL(string: "https://www.mariusseufzer.com")!
+    let name = "Marius Seufzer - Swift iOS Developer"
+    let description = "My portfolio website"
     var language: Language { .english }
     var imagePath: Path? { nil }
 
