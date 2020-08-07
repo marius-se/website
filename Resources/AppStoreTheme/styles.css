@@ -16,7 +16,7 @@
 
 
 body {
-  padding: 20px var(--spacing-medium);;
+  padding: 20px 0;
   margin: 0;
   font-family: 'Helvetica Neue', 'Roboto', sans-serif;
 }
@@ -62,6 +62,12 @@ hr {
 .body-link, .body-link:visited {
   color: var(--link);
   text-decoration: none;
+}
+
+
+.defaultContainer {
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
 }
 
 
@@ -135,6 +141,7 @@ hr {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   margin: var(--spacing-small) 0px;
+  padding: 0 var(--spacing-medium);
 }
 
 .project-card {
@@ -168,7 +175,8 @@ hr {
 
 .about-me {
   margin: 0;
-  padding: var(--spacing-medium) 0 var(--spacing-large) 0;
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
 }
 
 
@@ -180,7 +188,7 @@ hr {
 \*------------------------------------*/
 
 .footer {
-  padding: var(--spacing-small) 0 0 0;
+  padding-top: var(--spacing-small);
 }
 
 .footer-list {

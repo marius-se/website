@@ -17,7 +17,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                 .head(for: index, on: context.site),
                 .body(
                     .header(
-                        .class("header"),
+                        .class("header  defaultContainer"),
                         .img(
                             .class("profile-picture"),
                             .src(Path("AppStoreTheme/assets/profilePicture.jpg")),
@@ -34,11 +34,14 @@ extension Theme where Site == MariusSeufzerWebsite {
                             )
                         )
                     ),
-                    .hr(),
+                    .div(
+                        .class("defaultContainer"),
+                        .hr()
+                    ),
                     .main(
                         .div(
                             .class("projects"),
-                            .h3(.class("title"), .text("Projects")),
+                            .h3(.class("title  defaultContainer"), .text("Projects")),
                             .div(
                                 .class("horizontal-scroll"),
                                 .forEach(context.sections[.projects].items.sorted(by: { $0.date > $1.date }), {
@@ -50,7 +53,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 })
                             ),
                             .div(
-                                .class("one-liner"),
+                                .class("one-liner  defaultContainer"),
                                 .img(
                                     .class("other-skills-icon"),
                                     .src(Path("AppStoreTheme/assets/iconPallet.png")),
@@ -62,9 +65,12 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 )
                             )
                         ),
-                        .hr(),
                         .div(
-                            .class("about-me"),
+                            .class("defaultContainer"),
+                            .hr()
+                        ),
+                        .div(
+                            .class("about-me  defaultContainer"),
                             .p(
                                 .class("body-text"),
                                 .text("""
@@ -92,11 +98,14 @@ extension Theme where Site == MariusSeufzerWebsite {
                                     KungFu/Thaibox junkie. Photographer and digital artist.
                                 """)
                             )
-                        ),
+                        )
+                    ),
+                    .div(
+                        .class("defaultContainer"),
                         .hr()
                     ),
                     .footer(
-                        .class("footer"),
+                        .class("footer  defaultContainer"),
                         .h3(.class("title"), .text("Footer")),
                         .ul(
                             .class("footer-list"),
