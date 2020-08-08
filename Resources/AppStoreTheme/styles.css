@@ -66,8 +66,8 @@ hr {
 
 
 .defaultContainer {
-  padding-left: var(--spacing-medium);
-  padding-right: var(--spacing-medium);
+  margin-left: var(--spacing-medium);
+  margin-right: var(--spacing-medium);
 }
 
 
@@ -140,8 +140,8 @@ hr {
   flex-wrap: nowrap;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  margin: var(--spacing-small) 0px;
   padding: 0 var(--spacing-medium);
+  margin: var(--spacing-small) 0;
 }
 
 .project-card {
@@ -174,7 +174,6 @@ hr {
 \*------------------------------------*/
 
 .about-me {
-  margin: 0;
   padding-top: var(--spacing-medium);
   padding-bottom: var(--spacing-large);
 }
@@ -222,4 +221,36 @@ hr {
   width: 17px;
   height: 17px;
   margin: 0 0 0 auto;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+@media only screen and (min-width: 1069px) {
+  .defaultContainer, .horizontal-scroll {
+    margin-right: auto;
+    margin-left: auto;
+    width: 980px;
+  }
+
+  .horizontal-scroll {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 735px) {
+  .defaultContainer, .horizontal-scroll {
+    margin-right: auto;
+    margin-left: auto;
+    width: 692px;
+  }
+
+  .horizontal-scroll {
+    padding: 0;
+  }
 }
