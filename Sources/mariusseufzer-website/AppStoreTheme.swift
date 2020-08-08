@@ -25,8 +25,8 @@ extension Theme where Site == MariusSeufzerWebsite {
                         ),
                         .div(
                             .class("header-text-wrapper"),
-                            .h1(.class("title"), .text("Marius Seufzer - Freelancer")),
-                            .h2(.class("sub-title"), .text("Swift& iOS Developer")),
+                            .h1(.class("title  header-title"), .text("Marius Seufzer - Freelancer")),
+                            .h2(.class("subtitle  header-subtitle"), .text("Swift& iOS Developer")),
                             .a(
                                 .class("call-to-action"),
                                 .href("mailto:Marius%20Seufzer%20%3Cmarius.seufzer@icloud.com%3E"),
@@ -60,7 +60,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                                     .alt("Other platforms icon")
                                 ),
                                 .h4(
-                                    .class("sub-title  other-skills-text"),
+                                    .class("subtitle  other-skills-text"),
                                     .text("Also developing for other platforms including server-side Swift")
                                 )
                             )
