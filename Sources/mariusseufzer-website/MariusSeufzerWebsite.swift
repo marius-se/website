@@ -27,7 +27,7 @@ struct MariusSeufzerWebsite: Website {
         ),
         FooterItem.link(
             title: "GitHub",
-            destination: URL(string: "https://github.com/mariusseufzer")!,
+            destination: URL(string: "https://github.com/marius-se")!,
             iconPath: Path("AppStoreTheme/assets/iconGitHub.svg"),
             iconAltText: "GitHub logo"
         ),

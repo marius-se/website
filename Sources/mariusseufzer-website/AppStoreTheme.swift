@@ -17,7 +17,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                 .head(for: index, on: context.site),
                 .body(
                     .header(
-                        .class("header"),
+                        .class("header  defaultContainer"),
                         .img(
                             .class("profile-picture"),
                             .src(Path("AppStoreTheme/assets/profilePicture.jpg")),
@@ -25,8 +25,8 @@ extension Theme where Site == MariusSeufzerWebsite {
                         ),
                         .div(
                             .class("header-text-wrapper"),
-                            .h1(.class("title"), .text("Marius Seufzer - Freelancer")),
-                            .h2(.class("sub-title"), .text("Swift& iOS Developer")),
+                            .h1(.class("title  header-title"), .text("Marius Seufzer - Freelancer")),
+                            .h2(.class("subtitle  header-subtitle"), .text("Swift& iOS Developer")),
                             .a(
                                 .class("call-to-action"),
                                 .href("mailto:Marius%20Seufzer%20%3Cmarius.seufzer@icloud.com%3E"),
@@ -34,11 +34,14 @@ extension Theme where Site == MariusSeufzerWebsite {
                             )
                         )
                     ),
-                    .hr(),
+                    .div(
+                        .class("defaultContainer"),
+                        .hr()
+                    ),
                     .main(
                         .div(
                             .class("projects"),
-                            .h3(.class("title"), .text("Projects")),
+                            .h3(.class("title  defaultContainer"), .text("Projects")),
                             .div(
                                 .class("horizontal-scroll"),
                                 .forEach(context.sections[.projects].items.sorted(by: { $0.date > $1.date }), {
@@ -50,21 +53,24 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 })
                             ),
                             .div(
-                                .class("one-liner"),
+                                .class("one-liner  defaultContainer"),
                                 .img(
                                     .class("other-skills-icon"),
                                     .src(Path("AppStoreTheme/assets/iconPallet.png")),
                                     .alt("Other platforms icon")
                                 ),
                                 .h4(
-                                    .class("sub-title  other-skills-text"),
+                                    .class("subtitle  other-skills-text"),
                                     .text("Also developing for other platforms including server-side Swift")
                                 )
                             )
                         ),
-                        .hr(),
                         .div(
-                            .class("about-me"),
+                            .class("defaultContainer"),
+                            .hr()
+                        ),
+                        .div(
+                            .class("about-me  defaultContainer"),
                             .p(
                                 .class("body-text"),
                                 .text("""
@@ -72,20 +78,34 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 """),
                                 .br(),
                                 .br(),
-                                .text("""
-                                    If you have any questions about my service, or just wanna say hello, feel free to contact me. You can e-mail me at marius.seufzer@icloud.com or directly message me on Instagram @mariusseufzer.
-                                """),
+                                .text("If you have any questions about my service, or just wanna say hello, feel free to contact me. You can e-mail me at "
+                                ),
+                                .a(
+                                    .class("body-link"),
+                                    .href("mailto:Marius%20Seufzer%20%3Cmarius.seufzer@icloud.com%3E"),
+                                    .text("marius.seufzer@icloud.com")
+                                ),
+                                .text(" or directly message me on Instagram "),
+                                .a(
+                                    .class("body-link"),
+                                    .href(URL(string: "https://instagram.com/mariusseufzer")!),
+                                    .text("@mariusseufzer")
+                                ),
+                                .text("."),
                                 .br(),
                                 .br(),
                                 .text("""
                                     KungFu/Thaibox junkie. Photographer and digital artist.
                                 """)
                             )
-                        ),
+                        )
+                    ),
+                    .div(
+                        .class("defaultContainer"),
                         .hr()
                     ),
                     .footer(
-                        .class("footer"),
+                        .class("footer  defaultContainer"),
                         .h3(.class("title"), .text("Footer")),
                         .ul(
                             .class("footer-list"),
