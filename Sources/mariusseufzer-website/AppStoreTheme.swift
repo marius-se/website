@@ -133,7 +133,28 @@ extension Theme where Site == MariusSeufzerWebsite {
 
         func makePageHTML(for page: Page,
                           context: PublishingContext<MariusSeufzerWebsite>) throws -> HTML {
-            HTML(.empty)
+            HTML(
+                .lang(context.site.language),
+                .head(for: page, on: context.site),
+                .body(
+                    .header(
+                        .class("navigation-bar"),
+                        .a(
+                            .class("body-link"),
+                            .href(Path("index.html")),
+                            .text("< Back")
+                        )
+                    ),
+                    .main(
+                        .class("defaultContainer  body-text"),
+                        .h2(
+                            .class("title  header"),
+                            .text(page.title)
+                        ),
+                        page.body.node
+                    )
+                )
+            )
         }
 
         func makeTagListHTML(for page: TagListPage,

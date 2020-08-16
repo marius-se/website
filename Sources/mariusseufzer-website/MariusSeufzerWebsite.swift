@@ -18,35 +18,47 @@ struct MariusSeufzerWebsite: Website {
     var language: Language { .english }
     var imagePath: Path? { nil }
 
-    let footerItems: Array<FooterItem> = [
-        FooterItem.link(
-            title: "LinkedIn",
-            destination: URL(string: "https://linkedin.com/in/marius-seufzer")!,
-            iconPath: Path("AppStoreTheme/assets/iconLinkedIn.png"),
-            iconAltText: "LinkedIn logo"
+    let footerItems: Array<FooterItemType> = [
+        .link(link:
+            .init(
+                title: "LinkedIn",
+                destinationURL: URL(string: "https://linkedin.com/in/marius-seufzer")!,
+                iconPath: Path("AppStoreTheme/assets/iconLinkedIn.png"),
+                iconAltText: "LinkedIn logo"
+            )
         ),
-        FooterItem.link(
-            title: "GitHub",
-            destination: URL(string: "https://github.com/marius-se")!,
-            iconPath: Path("AppStoreTheme/assets/iconGitHub.svg"),
-            iconAltText: "GitHub logo"
+        .link(link:
+            .init(
+                title: "GitHub",
+                destinationURL: URL(string: "https://github.com/marius-se")!,
+                iconPath: Path("AppStoreTheme/assets/iconGitHub.svg"),
+                iconAltText: "GitHub logo"
+            )
         ),
-        FooterItem.link(
-            title: "Instagram",
-            destination: URL(string: "https://instagram.com/mariusseufzer")!,
-            iconPath: Path("AppStoreTheme/assets/iconInstagram.png"),
-            iconAltText: "Instagram logo"
+        .link(link:
+            .init(
+                title: "Instagram",
+                destinationURL: URL(string: "https://instagram.com/mariusseufzer")!,
+                iconPath: Path("AppStoreTheme/assets/iconInstagram.png"),
+                iconAltText: "Instagram logo"
+            )
         ),
-        FooterItem.link(
-            title: "Privacy Policy",
-            destination: URL(string: "#")!,
-            openInNewTab: false,
-            iconPath: Path("AppStoreTheme/assets/iconPrivacy.png"),
-            iconAltText: "Privacy icon"
+        .link(link:
+            .init(
+                title: "Privacy Policy",
+                destinationPath: Path("privacy-policy"),
+                iconPath: Path("AppStoreTheme/assets/iconPrivacy.png"),
+                iconAltText: "Privacy icon",
+                openInNewTab: false
+            )
         ),
-        FooterItem.text(
-            title: "Copyright",
-            description: "&copy; 2020 Marius Seufzer"
+        .text(text:
+            .init(
+                title: "Copyright",
+                description: "&copy; 2020 Marius Seufzer"
+            )
         )
     ]
+
+    
 }
