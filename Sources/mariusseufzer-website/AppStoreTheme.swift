@@ -153,7 +153,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                         ),
                         item.body.node,
                         .div(
-                            .class("horizontal-scroll"),
+                            .class("horizontal-scroll  horizontal-scroll__no-inset"),
                             .forEach(item.metadata.images, {
                                 .img(
                                     .class(projectCardClasses),
