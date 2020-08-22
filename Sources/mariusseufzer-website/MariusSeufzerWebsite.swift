@@ -10,6 +10,9 @@ struct MariusSeufzerWebsite: Website {
     struct ItemMetadata: WebsiteItemMetadata {
         let previewImagePath: Path
         let previewImageAltText: String
+        /// Key/Value pair for alt text and path to the image resource
+        let images: [Path]
+        let isIPad: Bool
     }
 
     let url = URL(string: "https://www.mariusseufzer.com")!
