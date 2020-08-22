@@ -45,10 +45,13 @@ extension Theme where Site == MariusSeufzerWebsite {
                             .div(
                                 .class("horizontal-scroll"),
                                 .forEach(context.sections[.projects].items.sorted(by: { $0.date > $1.date }), {
-                                    .img(
-                                        .class("project-card"),
-                                        .src($0.metadata.previewImagePath),
-                                        .alt($0.metadata.previewImageAltText)
+                                    .a(
+                                        .img(
+                                            .class("project-card"),
+                                            .src($0.metadata.previewImagePath),
+                                            .alt($0.metadata.previewImageAltText)
+                                        ),
+                                        .href($0.path)
                                     )
                                 })
                             ),
@@ -74,7 +77,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                             .p(
                                 .class("body-text"),
                                 .text("""
-                                    Hey, my name is Marius. I am a Swift developer. I prototype, design, program and maintain mainly for iOS but also macOS and other Apple devices, as well as backend systems. Back in 2013, I started to teach myself how to code. Now I'm studying software engineering at the CODE University of Applied Sciences in Berlin, have developed multiple Apps for companies (&for myself) and just started running my own business: Freelancing.
+                                    Hey, my name is Marius. I am a Swift developer. I prototype, design, program and maintain mainly for iOS but also macOS and other Apple devices, as well as backend systems. Back in 2013, I started to teach myself how to code. Now I'm studying software engineering at the CODE University of Applied Sciences in Berlin, have developed multiple Apps  and now started running my own business: Freelancing.
                                 """),
                                 .br(),
                                 .br(),
@@ -128,7 +131,40 @@ extension Theme where Site == MariusSeufzerWebsite {
 
         func makeItemHTML(for item: Item<MariusSeufzerWebsite>,
                           context: PublishingContext<MariusSeufzerWebsite>) throws -> HTML {
-            HTML(.empty)
+            let projectCardClasses = "project-card" +
+                (item.metadata.isIPad ? "  project-card__iPad" : "")
+            return HTML(
+                .lang(context.site.language),
+                .head(for: item, on: context.site),
+                .body(
+                    .header(
+                        .class("navigation-bar"),
+                        .a(
+                            .class("pin-right  body-link  body-link__bold"),
+                            .href(Path("index.html")),
+                            .text("Done")
+                        )
+                    ),
+                    .main(
+                        .class("defaultContainer  body-text"),
+                        .h2(
+                            .class("title  header"),
+                            .text(item.title)
+                        ),
+                        item.body.node,
+                        .div(
+                            .class("horizontal-scroll  horizontal-scroll__no-inset"),
+                            .forEach(item.metadata.images, {
+                                .img(
+                                    .class(projectCardClasses),
+                                    .src($0),
+                                    .alt("Project screenshot")
+                                )
+                            })
+                        )
+                    )
+                )
+            )
         }
 
         func makePageHTML(for page: Page,

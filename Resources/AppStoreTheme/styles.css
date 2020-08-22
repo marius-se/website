@@ -64,15 +64,25 @@ hr {
   line-height: 19px;
 }
 
-.body-link, .body-link:visited {
+.body-link:link, .body-link:visited {
   color: var(--link);
   text-decoration: none;
 }
+
+  .body-link__bold {
+    font-weight: 700;
+  }
 
 
 .defaultContainer {
   margin-left: var(--spacing-medium);
   margin-right: var(--spacing-medium);
+}
+
+
+.pin-right {
+  margin-right: var(--spacing-medium);
+  margin-left: auto;
 }
 
 
@@ -150,6 +160,10 @@ hr {
   margin: var(--spacing-small) 0;
 }
 
+  .horizontal-scroll__no-inset {
+    padding: 0;
+  }
+
 .project-card {
   flex: 0 0 auto;
   margin-right: 20px;
@@ -157,6 +171,10 @@ hr {
   width: 220px;
   height: 478px;
 }
+
+  .project-card__iPad {
+    width: 334px;
+  }
 
 
 .other-skills-icon {
