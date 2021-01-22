@@ -58,7 +58,7 @@ struct MariusSeufzerWebsite: Website {
         .text(text:
             .init(
                 title: "Copyright",
-                description: "&copy; 2020 Marius Seufzer"
+                description: "&copy; 2021 Marius Seufzer"
             )
         )
     ]
