@@ -8,6 +8,7 @@ struct MariusSeufzerWebsite: Website {
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
+        let id: Int
         let previewImagePath: Path
         let previewImageAltText: String
         /// Key/Value pair for alt text and path to the image resource

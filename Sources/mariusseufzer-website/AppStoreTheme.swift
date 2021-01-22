@@ -44,7 +44,9 @@ extension Theme where Site == MariusSeufzerWebsite {
                             .h3(.class("title  defaultContainer"), .text("Projects")),
                             .div(
                                 .class("horizontal-scroll"),
-                                .forEach(context.sections[.projects].items.sorted(by: { $0.date > $1.date }), {
+                                .forEach(context.sections[.projects].items.sorted(
+                                            by: { $0.metadata.id > $1.metadata.id }
+                                ), {
                                     .a(
                                         .img(
                                             .class("project-card"),
