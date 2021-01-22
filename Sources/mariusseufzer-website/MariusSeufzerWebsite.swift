@@ -8,6 +8,7 @@ struct MariusSeufzerWebsite: Website {
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
+        let id: Int
         let previewImagePath: Path
         let previewImageAltText: String
         /// Key/Value pair for alt text and path to the image resource
@@ -58,7 +59,7 @@ struct MariusSeufzerWebsite: Website {
         .text(text:
             .init(
                 title: "Copyright",
-                description: "&copy; 2020 Marius Seufzer"
+                description: "&copy; 2021 Marius Seufzer"
             )
         )
     ]

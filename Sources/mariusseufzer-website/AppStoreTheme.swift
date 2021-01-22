@@ -44,7 +44,9 @@ extension Theme where Site == MariusSeufzerWebsite {
                             .h3(.class("title  defaultContainer"), .text("Projects")),
                             .div(
                                 .class("horizontal-scroll"),
-                                .forEach(context.sections[.projects].items.sorted(by: { $0.date > $1.date }), {
+                                .forEach(context.sections[.projects].items.sorted(
+                                            by: { $0.metadata.id > $1.metadata.id }
+                                ), {
                                     .a(
                                         .img(
                                             .class("project-card"),
@@ -77,7 +79,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                             .p(
                                 .class("body-text"),
                                 .text("""
-                                    Hey, my name is Marius. I am a Swift developer. I prototype, design, program and maintain mainly for iOS but also macOS and other Apple devices, as well as backend systems. Back in 2013, I started to teach myself how to code. Now I'm studying software engineering at the CODE University of Applied Sciences in Berlin, have developed multiple Apps  and now started running my own business: Freelancing.
+                                    Hey, my name is Marius. I am a Swift developer. I prototype, design, program and maintain mainly for iOS but also macOS and other Apple devices, as well as backend systems. Back in 2013, I started to teach myself how to code. These days I'm studying software engineering at the CODE University of Applied Sciences in Berlin, have developed multiple apps and started running my own business: Freelancing.
                                 """),
                                 .br(),
                                 .br(),
