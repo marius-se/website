@@ -7,4 +7,6 @@ title: Project Mastery
 ---
 Mastery is a little fun-side-project I started with two friends during the Corona lockdown.
 
+Find it on the [AppStore](https://apps.apple.com/de/app/mastery/id1505729910?l=en)
+
 *Keywords: Fun fun fun!*
