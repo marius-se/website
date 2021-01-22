@@ -10,4 +10,4 @@ How does an event photographer distribute photos to guests as efficiently as pos
 
 A backend server, an iPad app and a command line tool. 100% Swift. By choosing a Swift-only stack I was able to reuse a lot of code while keeping up the maintainability and readability for future development.
 
-* Keywords: Server-side Swift (Vapor), Enterprise Distribution, CLI tool, Alamofire, Kingfisher, Digital Ocean, Websockets, AWS S3*
+*Keywords: Server-side Swift (Vapor), Enterprise Distribution, CLI tool, Alamofire, Kingfisher, Digital Ocean, Websockets, AWS S3*
