@@ -100,7 +100,7 @@ extension Theme where Site == MariusSeufzerWebsite {
                                 .br(),
                                 .br(),
                                 .text("""
-                                    KungFu/Thaibox junkie. Photographer and digital artist.
+                                    KungFu/Thaibox junkie. 15% artist.
                                 """)
                             )
                         )
